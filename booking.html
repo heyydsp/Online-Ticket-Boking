@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Booking Confirmation</h2>
+    <p>Your booking has been confirmed.</p>
+    <p>From: <span id="from"></span></p>
+    <p>To: <span id="to"></span></p>
+    <p>Date: <span id="date"></span></p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('from').textContent = params.get('from');
+    document.getElementById('to').textContent = params.get('to');
+    document.getElementById('date').textContent = params.get('date');
+  </script>
+</body>
+</html>
